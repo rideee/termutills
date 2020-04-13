@@ -7,9 +7,9 @@ import (
 )
 
 // Print - print input with ANSI ESC Control Sequence.
-// f - foreground color
-// b - background color
-// mode - (bold, dim etc.)
+// f - foreground color,
+// b - background color,
+// mode - (bold, dim etc.).
 func Print(f string, b string, mode string, input string) {
 	fmt.Print(MakeEscSeq(f, b, mode, input))
 }
