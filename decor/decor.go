@@ -73,7 +73,7 @@ func MPrintf(mode string, format string, input ...interface{}) {
 	Printf("", "", mode, format, input...)
 }
 
-// MakeEscSeq Return(string) input(string) with ANSI ESC Control Sequence.
+// MakeEscSeq - Return(string) input(string) with ANSI ESC Control Sequence.
 func MakeEscSeq(f string, b string, mode string, input string) string {
 	var combo string
 
