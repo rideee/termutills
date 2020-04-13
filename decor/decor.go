@@ -1,3 +1,4 @@
+// Package decor provides methods similar to fmt package, with extra ANSI Escape Control Sequences.
 package decor
 
 import (
@@ -6,6 +7,9 @@ import (
 )
 
 // Print - print input with ANSI ESC Control Sequence.
+// f - foreground color
+// b - background color
+// mode - (bold, dim etc.)
 func Print(f string, b string, mode string, input string) {
 	fmt.Print(MakeEscSeq(f, b, mode, input))
 }
@@ -69,7 +73,7 @@ func MPrintf(mode string, format string, input ...interface{}) {
 	Printf("", "", mode, format, input...)
 }
 
-// Return(string) input(string) with ANSI ESC Control Sequence.
+// MakeEscSeq Return(string) input(string) with ANSI ESC Control Sequence.
 func MakeEscSeq(f string, b string, mode string, input string) string {
 	var combo string
 
